@@ -1,0 +1,200 @@
+/* CSS files add styling rules to your content */
+html, body {
+    height: 100%; /* IMPORTANT!!! stretches viewport to 100% */
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Nunito, "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+body.preload *{
+  transition: opacity 0s, transform 0s !important;
+}
+
+#heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#illustrationContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.illustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.illustrationCaption {
+  color: #FD3B52;
+  font-family: "Nunito";
+  text-align: center;
+  font-size: 1.5rem;
+  height: 170px;
+}
+
+
+#appLogo {
+  padding-bottom: 30px;
+  height: 0px;
+  transition: 0.75s height;
+  -webkit-user-drag: none;
+}
+
+#logoAndDownload {
+  width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999999;
+}
+
+#appTitle {
+  color: #FF4444;
+  font-family: 'Nunito';
+  font-weight: 800;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 32px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.75s, opacity 0.75s;
+}
+
+#appCaption {
+  color: #FF4444;
+  font-family: 'Nunito';
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 23px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.75s, opacity 0.75s;
+}
+
+#appDownloadButton {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.75s, opacity 0.75s;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-drag: none;
+}
+
+#footerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  flex-flow: column wrap;
+}
+
+#contacts {
+  font-family: "Nunito";
+  color: #FF4444;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#copyrights {
+  font-family: "Nunito";
+  color: #FF4444;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 12px;
+}
+
+#getInTouch {
+  font-family: "Nunito";
+  color: #FF4444;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.contactLink {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mailLink {
+  color: red;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 500px) {
+  /* For mobile */
+  #illustrationContainer {
+  flex-direction: column;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  }
+  
+  .illustrationCaption {
+    margin-top: -10px;
+    margin-bottom: 60px;
+  }
+  
+  .illustration {
+  max-width: 75%;
+  }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  /* For tablets */
+  #illustrationContainer {
+  flex-direction: column;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  }
+  
+  .illustrationCaption {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .illustration {
+  max-width: 60%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* For desktop: */
+  #illustrationContainer {
+  flex-direction: row;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  height: 90vh;
+  }
+  
+  .illustrationCaption {
+    margin-top: 20px;
+  }
+  
+  .illustration {
+  max-width: 30%;
+  }
+}
+
